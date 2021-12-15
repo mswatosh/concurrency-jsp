@@ -23,7 +23,7 @@ public class SimpleServlet extends HttpServlet {
 		//JSP code - test principal propagation
 
 		String s1 = new String("(" + Thread.currentThread().getId() + ") getUserPrincipal: " + request.getUserPrincipal());
-        String s2 = "";
+		String s2 = "";
 
 		//Use a managedScheduledExecutor
 		ExecutorService executor = Executors.newFixedThreadPool(3);
@@ -39,7 +39,7 @@ public class SimpleServlet extends HttpServlet {
 		//end JSP code
 
 		ServletOutputStream out = response.getOutputStream();
-        out.println(s1);
+		out.println(s1);
 		out.println(s2);
 		out.println("");
 
